@@ -15,6 +15,7 @@ def exibir_nome_do_programa():
 ╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░  
 """)
 
+
 def exibir_opcoes():
     print('1. Cadastrar restaurante')
     print('2. Listar restaurantes')
@@ -43,8 +44,9 @@ def exibir_subtitulo(texto):
 def cadastrar_novo_restaurante():
     exibir_subtitulo('Cadastro de novos restaurantes')
     nome_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
-    categoria = input(f'Digite a categoria do restaurante {nome_restaurante} ')
-    restaurantes.append(nome_restaurante)
+    categoria = input(f'Digite a categoria do restaurante {nome_restaurante}: ')
+    restaurante = {'nome':nome_restaurante, 'categoria':categoria, 'ativo':False}
+    restaurantes.append(restaurante)
     print(f'O restaurante {nome_restaurante} foi cadastrado com sucesso!')
     
     
